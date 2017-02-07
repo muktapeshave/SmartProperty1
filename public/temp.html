@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Blockchain Statistics</title>
+		<link rel="stylesheet" type="text/css" href="main.css" ></link>
+		<link rel="stylesheet" type="text/css" href="stats.css" ></link>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="plugins/jQuery-1.11.3.js" type="text/javascript"></script>
+		<script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="plugins/d3/d3.min.js"></script>
+		<script>var pgNm = "main" </script>
+		<script src="config.js" type="text/javascript"></script>
+		<script src="charts.js" type="text/javascript"></script>
+		<script src="stats.js" type="text/javascript"></script>
+		<script src="general_page_functions.js" type="text/javascript"></script>
+	</head>
+	<body class="Container"  style="background-image:url('bg.jpg');background-repeat: no-repeat ;  position:relative; background-size:cover  "> 
+	<br><br><br>
+	<div class="well container" style="background-image:url('bg.jpg'); position:realtive; background-repeat: no-repeat; background-size:cover" >
+			<h1 style="color: black; text-align: center; font-family:monospace; font-size: 300%" ><strong>SMART PROPERTY REGISTRY</strong></h1>
+				<dd style="text-align: center; font-size: 150%">  Blockchain enabled solution for property registry</dd>
+		</div>
+		<h1 colspan="4" class="homeBtn" ><a href="index.html" >Home</a></h1>
+		
+  <table class="table table-bordered" align="center">
+    <thead>
+      <tr>
+        <th class="statsRw noLBord"style="width:33%;text-align:center" ><span class="statHdr" style="font-size:125%">Last Block</span><span class="valDisp" ><span id="currBlock" ></span></span></th>
+				<th class="statsRw allBord" style="width:33%;text-align:center"><span class="statHdr" style="font-size:125%">Created</span><span class="valDisp" ><span id="timeSince"></span></span></th>
+				<th class="statsRw noRBord" style="width:33%;text-align:center"><span class="statHdr" style="font-size:125%">Avg Block Time</span><span class="valDisp" ><span id="avgTime"></span></span></th>
+      </tr>
+    </thead>
+  </table>		
+		
+	</body>
+	</html>

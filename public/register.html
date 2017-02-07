@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head >
+
+<script src="myscript.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  
+  function validatedata()
+  {
+  alert('inside');
+  var aadhaar = document.getElementById("aadhaarno");
+  var survey = document.getElementById("surveyno");
+  
+  
+  var aadhaarnumber = /^[0-9]{12}$/; 
+  if(!aadhaar.value.match(aadhaarnumber))
+  {
+	document.getElementById("aadhaarmsg").innerHTML="<br/>Aadhar number must be 12 digits";
+	
+	alert('Aadhar number must be 12 digits');
+  
+  }
+  if(document.getElementById("land").checked==false && document.getElementById("builtup").checked==false )
+  
+	  {
+		alert("Select type of property ");
+	  }
+  
+  }
+  </script>
+  
+  
+</head>
+<body class="Container" style="background: url(product-realestate1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;"> 
+	<br><br><br>
+	<div class="container" style="background-image:url('temp1.png'); position:realtive; background-repeat: no-repeat; background-size:cover" >
+			<h1 style="color: black; text-align: center-left; ; font-family:monospace; font-size:350%" ><strong>SMART PROPERTY REGISTRY</strong></h1>
+				<h3 style="text-align: center ; font-size:20px; font-family:Times New Roman"><strong> -Blockchain enabled solution for property registry</strong></h3>
+		</div>
+		
+		<div>
+			<div class="row" style="width: 100%; height: 100%;">
+		
+			<div class="col-sm-8">
+				<br>
+				<br>
+				<br>
+				<h2 style="padding-left :10%; color: black; "> Welcome </h2>
+				<center>
+				<div style="padding-right: 35%">
+				<button class="btn btn-link btn-lg" style="width: 25%; height: 10%; border: none; background: none; outline-style: none; position: relative" data-toggle="modal" data-target="#myModal" >
+					<span style="color: black; font-family: sans-serif; font-size:xx-large;">Register a Property</span></button>
+				  <div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog">
+    
+									<!-- Modal content-->
+								<div class="modal-content">
+						        <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Register a Property</h4>
+					</div>
+					<form>
+							    <div class="modal-body" style="align:center">
+									<h5> <strong>Property Owner Details</strong></h5><br>
+									Property Owner Name:  <input type="text" name="name" placeholder="Enter Name"  required><br><br>
+									Aadhar Card Number:   &nbsp;<input type="text" id="aadhaarno"   pattern="[0-9]{12}" title="Aadhaar number must be 12 digits"   placeholder="Enter Aadhar Number"  required /><span id="aadhaarmsg"></span>
+									<br>
+									<br>
+									<h5><p><strong> Property Details </strong></p></h5>
+									<br>
+									Property Survey No:  &nbsp;<input type="text" id="surveyno"  name="name" placeholder="Enter Survey No"  required /> 
+									<br>
+									<br>
+									Property Location:  &nbsp;&nbsp;&nbsp;<input type="text" name="name" placeholder="Enter Location" required/>
+									<br><br>
+									&nbsp;&nbsp;&nbsp;Area Details: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea type="text" name="name" required placeholder="Enter Area Details" style="font-family:sans-serif"></textarea>
+									<br>
+									<br>
+									<div class="checkbox" >
+										<label><input type="radio" name="propertytype" value=""  id="land" required onchange='fun1(this);'>Land Property</label>&nbsp;
+										<label><input type="radio" name="propertytype" value="" id="builtup" onchange='fun1(this);'>Built Up Property</label>
+									</div>
+									
+									
+					         	</div>
+								<div class="modal-footer">
+									<input type="submit"  value="Register" />
+							
+								</div>
+							
+					</form>
+					</div>
+      
+			</div>
+		</div>
+				<br>
+				<button class="btn btn-link btn-lg" style="width: 25%; height: 10%; border: none; background: none; outline-style: none; position: relative" data-toggle="modal" data-target="#my
+				1" >
+					<span  style="color: black; font-family: sans-serif; font-size:xx-large;"> View Properties for Lease</span></button>
+				<br>
+				<div class="modal fade" id="myModal1" role="dialog">
+						<div class="modal-dialog">
+    
+									<!-- Modal content-->
+								<div class="modal-content">
+						        <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Under Construction</h4>
+					</div>
+							       <div class="modal-body">
+						        <p>We will be back</p>
+					         	</div>
+								<div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+					</div>
+      
+			</div>
+		</div>
+			
+		
+		<button class="btn btn-link btn-lg" style="width: 25%; height: 10%; border: none; background: none; outline-style: none; position: relative" data-toggle="modal" data-target="#myModal2" >
+					<span style="color: black; font-family: sans-serif; font-size:xx-large;">View Properties for Sale</span></button>
+				<br>
+				  <div class="modal fade" id="myModal2" role="dialog">
+						<div class="modal-dialog">
+    
+									<!-- Modal content-->
+								<div class="modal-content">
+						        <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Modal Header2</h4>
+					</div>
+							       <div class="modal-body">
+						        <p>Some text in the modal.</p>
+					         	</div>
+								<div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+					</div>
+      
+			</div>
+		</div>
+		
+		<button class="btn btn-link btn-lg" style="width: 25%; height: 10%; border: none; background: none; outline-style: none; position: relative" data-toggle="modal" data-target="#myModal3" >
+					<span style="color: black; font-family: sans-serif; font-size:xx-large;">View Registered Properties</span></button>
+				<br>
+				  <div class="modal fade" id="myModal3" role="dialog">
+						<div class="modal-dialog">
+    
+									<!-- Modal content-->
+								<div class="modal-content">
+						        <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Modal Header3</h4>
+					</div>
+							       <div class="modal-body">
+						        <p>Some text in the modal.</p>
+								<input type="text" name="name" placeholder="Enter Name"/>
+					         	</div>
+								<div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+					</div>
+      
+			</div>
+		</div>
+		</div>
+		
+		</center>
+           </div>	
+			
+			</div>
+			<div class="col-sm-4"></div>		
+		</div>
+</body>
+</html>

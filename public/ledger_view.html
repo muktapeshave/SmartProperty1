@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Ledger view</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" />	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="ledger.js"></script>
+
+     <style>
+	<!--	th{
+			text-align: center;
+		}
+		.table-bordered td, .table-bordered th{
+		border-color: black !important;
+		}
+        -->
+		<!-- #myInput {
+        background-image: url('imgs/search.png'); /* Add a search icon to input */
+        background-position: 10px 6px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 100%; /* Full-width */
+        font-size: 16px; /* Increase font-size */
+        padding: 12px 20px 12px 40px; /* Add some padding */
+        border: 1px solid black; /* Add a grey border */
+        margin-bottom: 12px; /* Add some space below the input */
+        background-color:rgba(0, 0, 0, 0);
+    }  -->
+	</style>
+
+		<!-- th{
+			text-align: center;
+		}
+		.table-bordered td, .table-bordered th{
+		border-color: black !important;
+		}
+        #table-wrapper {
+  position:relative;
+}
+        #table-scroll {
+        height:300px;
+        overflow:auto;  
+        margin-top:20px;
+    }
+        #table-wrapper table {
+        width:100%;
+
+        }
+    #table-wrapper table * {
+    background:white;
+    color:black;
+    }
+    #table-wrapper table  .text {
+    position:absolute;   
+    top:-20px;
+    z-index:2;
+    height:80px;
+    width:35%;
+    border:1px solid red;
+    }
+        
+	</style> -->
+    </head>
+
+	<body class="Container" style="background: url(bg3.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+		<br><br><br>
+		<div class="well container" style="background-image:url('temp1.png'); position:realtive; background-repeat: no-repeat; background-size:cover" >
+			<h1 style="color: black; text-align: center-left; font-family:monospace; font-size: 300%" ><strong>SMART PROPERTY REGISTRY</strong></h1>
+			<dd style="text-align: center; font-size: 150%">  Blockchain enabled solution for property registry</dd>
+		</div>
+		<div align="center">
+		<a href="index.html" style="color:black ;font-size:30px; font-family:Times New Roman"><strong>Home</strong></a>
+		</div>
+		<h2 style="padding-left:10%">Ledger View...</h2>
+        <div id="ldr" class="loader" style="display:none;" align="center">
+        <img id="l" src="imgs/loading.gif" >
+        </div>
+        <div class="container">
+		
+        
+        <!-- <div class="container">
+    <div id="table-wrapper">
+    
+  <div id="table-scroll">
+    <div class="table-responsive">
+     
+  <table class="table table-bordered table-hover" style="text-align: center; border-top-color:black">
+    <thead style="text-align: center; color:black; font-family:Times New Roman; font-size:20px">
+      <tr>
+        <th>Transaction ID</th>
+        <th>Description</th>
+        <th>Date and Time</th>
+      </tr>
+    </thead>
+    <tbody id="d" style="font-family:Times New Roman; font-size:15px; overflow-y:auto; height:200px">
+    </tbody>
+  </table>
+  </div>
+   </div>
+   </div>
+</div> -->
+
+		
+	<div id="table-wrapper">
+    <input type="text" id="myInput" onkeyup="mySearch(this.value)" placeholder="Search...">
+    <div id="table-scroll">
+    <div class="table-responsive">
+  <table class="table table-bordered table-hover" style="text-align: center; border-top-color:black">
+    <thead style="text-align: center; color:black; font-family:Times New Roman; font-size:20px">
+      <tr>
+        <th>Transaction ID</th>
+        <th>Description</th>
+        <th>Date and Time</th>
+      </tr>
+    </thead>
+    <tbody id="d" style="font-family:Times New Roman font-size:25px; overflow:auto; height:200px">
+    </tbody>
+  </table>
+  </div>
+   </div>
+</div>
+
+</div>
+		
+		
+    </body>
+</html>
